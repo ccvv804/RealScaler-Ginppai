@@ -1,8 +1,7 @@
 <div align="center">
     <br>
-    <img src="https://user-images.githubusercontent.com/32263112/202846672-027bc15c-8db1-424c-b241-5b466e66c66e.png" width="175"> </a> 
-    <br><br> RealScaler - fast image/video AI upscaler app (Real-ESRGAN) <br><br>
-    <a href="https://jangystudio.itch.io/realesrscaler">
+    <br><br> RealScaler-Ginppai - 긴빠이된 fast image/video AI upscaler app (Real-ESRGAN) <br><br>
+    <a href="https://github.com/ccvv804/RealScaler-Ginppai/releases">
          <img src="https://user-images.githubusercontent.com/86362423/162710522-c40c4f39-a6b9-48bc-84bc-1c6b78319f01.png" width="200">
     </a>
 </div>
@@ -11,37 +10,32 @@
     <img src="https://github.com/Djdefrag/RealScaler/assets/32263112/8a2a4a83-82e5-483a-8e2e-ca59067b276a"> </a> 
 </div>
 
+## 이 저장소는?
+이 저장소는 [Djdefrag/RealScaler](https://github.com/Djdefrag/RealScaler)를 긴빠이 한것입니다. 언제 어디에서 누구나 손쉽게 RealScaler를 긴빠이 할 수 있도록 편집되었지만 소스코드 수정은 없습니다.
 
-## What is RealScaler?
-RealScaler is a Windows app that uses Real-ESRGAN artificial intelligence to enhance, enlarge and reduce noise in photographs and videos.
-
-## Other AI projects.🤓
-
-- https://github.com/Djdefrag/QualityScaler / QualityScaler - image/video AI upscaler app (BSRGAN)
-- https://github.com/Djdefrag/FluidFrames.RIFE / FluidFrames.RIFE - video AI interpolation app (RIFE-HDv3)
-
+### 긴빠이?
+긴빠이는 해병 문학에서 등장하는 단어로서 훔친다는 의미의 해병대 은어입니다. 일본어 ギンバエ에서 유례된 것으로 추정되고 있습니다.
 
 ## Credits.
-
 Real-ESRGAN - https://github.com/xinntao/Real-ESRGAN
 
-## How is made. 🛠
-
-RealScaler is completely written in Python, from backend to frontend. 
-External packages are:
-- AI  -> torch / torch-directml
-- GUI -> customtkinter / win32mica
-- Image/video -> openCV / moviepy
-- Packaging   -> pyinstaller / upx
-
-## Requirements. 🤓
+## Requirements.
 - Windows 11 / Windows 10
+    - DirectML 덕분에 리눅스나 맥은 안됩니다.
 - RAM >= 8Gb
-- Directx12 compatible GPU:
-    - any AMD >= Radeon HD 7000 series
-    - any Intel HD Integrated >= 4th-gen core
-    - any NVIDIA >=  GTX 600 series
+- Directx12 compatible GPU
+    - 합리적인 사용을 위해서는 어느정도 성능이 되어야 합니다.
+## How to install manually.
 
+```sh
+git clone https://github.com/ccvv804/RealScaler-Ginppai
+cd RealScaler-Ginppai
+python -m venv venv
+.\venv\Scripts\activate
+pip install -r requirements.txt
+python QualityScaler.py
+```
+  
 ## Features.
 - [x] Easy to use GUI
 - [x] Images and Videos upscale
@@ -51,43 +45,10 @@ External packages are:
 - [x] Compatible images - png, jpeg, bmp, webp, tif  
 - [x] Compatible video  - mp4, wemb, gif, mkv, flv, avi, mov, qt 
 
-## Next steps. 🤫
-- [ ] 1.X versions
-    - [x] Switch to Pytorch-directml to support all Directx12 compatible gpu (AMD, Intel, Nvidia)
-    - [x] New GUI with Windows 11 style
-    - [x] Include audio for upscaled video
-    - [x] Optimizing video frame resize and extraction speed
-    - [x] Multi GPU support (for pc with double GPU, integrated + dedicated)
-    - [x] Python 3.10 (expecting ~10% more performance)
-- [ ] 2.X versions (now under development)
-    - [x] New, completely redesigned graphical interface based on @customtkinter
-    - [x] Upscaling images and videos at once (currently it is possible to upscale images or single video)
-    - [x] Upscale multiple videos at once
-    - [ ] Python 3.11 (expecting ~30% more performance)
-    - [ ] Torch/torch-directml 2.0 (expecting ~20% more performance)
-
-### Some Examples.
-#### Videos
-- Original
-
-![boku-no-hero-my-hero-academia](https://user-images.githubusercontent.com/32263112/209639439-94c8774d-354e-4d56-9123-e1aa4af95e08.gif)
-
-- RealESRGANx4 - upscaled in 3 minutes and 23 seconds
-
-https://user-images.githubusercontent.com/32263112/209639499-83eb4609-a842-43f9-b8a2-9fffd23e1d2c.mp4
-
-- RealESR_Gx4 - upscaled in 57 seconds
-
-https://user-images.githubusercontent.com/32263112/209639569-c201a965-c6bf-4b7c-9904-61114b5bf4d5.mp4
-
-
-#### Images!
-
-![test1](https://user-images.githubusercontent.com/32263112/223775329-2400f251-d6a3-45bb-ae94-09e40c55a6e1.png)
-
-![test2](https://user-images.githubusercontent.com/32263112/223775065-2c304b76-ca1b-4efc-83d5-16c091be0cd1.png)
-
-![test5](https://user-images.githubusercontent.com/32263112/203338133-0d0945f1-0129-4b36-8801-1510cf8892b8.png)
-
-![a](https://user-images.githubusercontent.com/32263112/206723952-3f3110c9-9328-4bcc-94e0-8aaec0279eeb.png)
-
+## How is made. 🛠
+RealScaler is completely written in Python, from backend to frontend. 
+External packages are:
+- AI  -> torch / torch-directml
+- GUI -> customtkinter / win32mica
+- Image/video -> openCV / moviepy
+- Packaging   -> pyinstaller / upx
